@@ -4,44 +4,52 @@
         <meta charset="utf-8">
         <title>Tea's Home Page</title>
         <style type="text/css">
-        .border { border-radius: 10%;
+        .border { border-radius: 30%;
         border-style: dotted;
-        border-color: antiquewhite;
+        margin-right: 300px;
+        margin-left: 300px;
+        border-color: rgb(255, 147, 147);
+        background-color:  rgba(250, 250, 210, 0.671);
         position: relative;
         text-align: center;
-        -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.5);
-        color: antiquewhite;
+        -webkit-text-stroke: 1.5 px rgba(0, 0, 0, 0.5);
+        color:black;
         font-size:150%;
         }
-        header  {background-color:  #FFC5D1;
+        header  {background-color:  #ffc5d1cb;
+        background-position: 1000px;
                  color: antiquewhite;
                  text-align: center;
                  font-size: x-large;
                  font-family: Arial, Helvetica, sans-serif;
                  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.5);
-                 border-radius: 15px;
+                 border-radius: 30px;
                 }
         .Info          {background-color: #FEFFE6;
                      font-family: Arial, Helvetica, sans-serif;
                       text-align: center;
-                      width: 20%;
                       float: right;
+                      
                     }           
         .CV {  font-size: small;  }
-        h4 {background-color: azure;}    
+        h4 {background-color: azure;
+        font-size: larger;
+                }    
         .float {       
                         text-align: right;
-                        float: right;
-                        }
-        .cvpara {   width: 45%;
-        position: relative;
+                        
                         }
           nav{            font-weight: bold;
+          font-size: x-large;
                           color: rgb(255, 104, 167);
                          border: 2px solid azure;
+                         border-radius: 20%;
                          text-align: center;
-                         width: 95em;
-                         background-color: #FEFFE6;
+                         
+                         font-family: Arial, Helvetica, sans-serif;
+                         margin-left: 300px;
+                         margin-right: 300px;
+                         background-color: #ffc5d1cb;
           }
           nav ul {  display: none;
             list-style: none;
@@ -50,11 +58,26 @@
              nav:hover ul { display: block }
              nav ul li { border-top: 2px solid azure;
                             background-color: rgb(255, 239, 239);
-                        width:95em;
+                        
                          color: black; }
               nav ul li:hover { background-color: azure; }
               a { text-decoration: none; }
-
+              body{
+                  
+                  background-image: url(https://previews.123rf.com/images/creativejenn/creativejenn1810/creativejenn181000053/110376492-terrazzo-floor-marble-seamless-pattern-pink-yellow-blue-and-white-palette-traditional-venetian-mater.jpg);
+                  background-size: 500px,500px;
+              }
+              .column {
+                  background-color: rgba(250, 250, 210, 0.671);
+                    float: left;
+                    width: 33.33%;
+                    padding: 1px;
+                    }
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
 
                     </style>
     </head>
@@ -65,6 +88,7 @@
     </header>
 
     <body>
+        <p class="border">Теа Димитровска</p>
         <nav>Мени
             <ul>
              <li><a href = "vezba.html">Дома</a></li>
@@ -75,54 +99,66 @@
             <li><a href = "Анкета.html">Анкета за посетители</a></li>
             </ul>
             </nav>
-        <p class="border">Теа Димитровска</p>
-        <p> <img src="3714.JPG" width="400" height="540" alt="Intro Photo" style="float:right;">
-            <p class="Info">
-            
-                <b>Добредојдовте на мојата веб страна!</b> Јас сум Теа Димитровска и имам 21 година. Уште од рана возраст ме возхитување терминот Интернет, па така следејќи ги моите инстинкти дојдов до четврта година на ФЕИТ. Пријателите ме опишуваат како опуштена, позитивна и отворена личност која е секогаш заинтересирана за откривање и учење нови области. Имам куче старо една година кој е мојот најверен другар и мојот сон е секое бездомно животинче да има свој дом. Покрај технологијата и животните, уште една сфера која ме интересира е модата. Со задоволство цртам, обожавам дизајн и естетика. Секогаш знам да одвојам време за себе и го посветувам на вежбање, јога, планинарење, возење точак и се разбира во зима скијање. Викендот е мојот омилен дел од неделата и најчесто го поминувам излезена со пријатели или на некое мини патување. Повеќе за мене и моите хобија може да дознаете на оваа веб страна, како и да доловите моменти од мојот живот во мојата фото галерија. Се надевам ќе уживате!
+        <div class="row">
+            <div class="column" style="margin-left: 300px;">
+                <h4 class="cvpara"><b>Едукација</b></h4>
+                <ul>
+                    <li>Дипломиран инженер по електротехника и информациски технологии 
+                        <p class="CV">Насока: Телекомуникации и информациско инженерство</p> 
+                        2017-Сегашност</li>
+                </ul>
                 
-            </p>
-            <h4 class="cvpara"><b>Едукација</b></h4>
-            <ul>
-                <li>Дипломиран инженер по електротехника и информациски технологии 
-                    <p class="CV">Насока: Телекомуникации и информациско инженерство</p> 
-                    2017-Сегашност</li>
-            </ul>
+    
+                <h4 ><b>Вештини</b></h4>
+                <ul>
+                    <li>C програмски јазик</li>
+                    <progress value="60" max="200"></progress></br>
+                    <li>C++ програмски јазик</li>
+                    <progress value="70" max="200"></progress></br>
+                    <li>SQL</li>
+                    <progress value="50" max="200"></progress></br>
+                    <li>UX/UI Design</li>
+                    <progress value="100" max="200"></progress></br>
+                    <li>Microsoft Office Package</li>
+                    <progress value="110" max="200"></progress></br>
+                    <li>Adobe Photoshop</li>
+                    <progress value="100" max="200"></progress></br>
+                    <li>Adobe Illustrator</li>
+                    <progress value="120" max="200"></progress></br>
+    
+                </ul>
+                <h4 class="cvpara"><b>Пракси</b></h4>
+                <ul>
+                    <li>IT инженер во Централна Кооперативна Банка, Скопје </li>
+                </ul>
+                <h4 ><b>Јазици</b></h4>
+                <ul> 
+                     <li>Англиски јазик</li>
+                     <progress value="180" max="200"></progress></br>
+                    <li>Германски јазик</li>
+                    <progress value="120" max="200"></progress></br>
+                    <li>Шпански јазик</li>
+                    <progress value="120" max="200"></progress></br>
+                    <li>Руски јазик</li>
+                    <progress value="130" max="200"></progress></br>
+                </ul>
+            </div>
+            <div class="column">
+                <p><img src="3714.JPG" width="400" height="530" alt="Intro Photo"  ></p>
+            </div>
+            <div class="column" style="width: 400px;">
+                <p class="Info";>
+                    <details>
+                    <summary style="font-size: large;"><b>Кликни за да дознаеш повеќе!</b></summary>
+                    <p><b>Добредојдовте на мојата веб страна!</b> Јас сум Теа Димитровска и имам 21 година. Уште од рана возраст ме возхитување терминот Интернет, па така следејќи ги моите инстинкти дојдов до четврта година на ФЕИТ. Пријателите ме опишуваат како опуштена, позитивна и отворена личност која е секогаш заинтересирана за откривање и учење нови области. Имам куче старо една година кој е мојот најверен другар и мојот сон е секое бездомно животинче да има свој дом. Покрај технологијата и животните, уште една сфера која ме интересира е модата. Со задоволство цртам, обожавам дизајн и естетика. Секогаш знам да одвојам време за себе и го посветувам на вежбање, јога, планинарење, возење точак и се разбира во зима скијање. Викендот е мојот омилен дел од неделата и најчесто го поминувам излезена со пријатели или на некое мини патување. Повеќе за мене и моите хобија може да дознаете на оваа веб страна, како и да доловите моменти од мојот живот во мојата фото галерија. Се надевам ќе уживате!
+                    </p>
+                </details>
+                </p>
+            </div>
+        </div>
+        <p> 
             
-
-            <h4 class="cvpara"><b>Вештини</b></h4>
-            <ul>
-                <li>C програмски јазик</li>
-                <progress value="60" max="200"></progress></br>
-                <li>C++ програмски јазик</li>
-                <progress value="70" max="200"></progress></br>
-                <li>SQL</li>
-                <progress value="50" max="200"></progress></br>
-                <li>UX/UI Design</li>
-                <progress value="100" max="200"></progress></br>
-                <li>Microsoft Office Package</li>
-                <progress value="110" max="200"></progress></br>
-                <li>Adobe Photoshop</li>
-                <progress value="100" max="200"></progress></br>
-                <li>Adobe Illustrator</li>
-                <progress value="120" max="200"></progress></br>
-
-            </ul>
-            <h4 class="cvpara"><b>Пракси</b></h4>
-            <ul>
-                <li>IT инженер во Централна Кооперативна Банка, Скопје </li>
-            </ul>
-            <h4 class="cvpara"><b>Јазици</b></h4>
-            <ul> 
-                 <li>Англиски јазик</li>
-                 <progress value="180" max="200"></progress></br>
-                <li>Германски јазик</li>
-                <progress value="120" max="200"></progress></br>
-                <li>Шпански јазик</li>
-                <progress value="120" max="200"></progress></br>
-                <li>Руски јазик</li>
-                <progress value="130" max="200"></progress></br>
-            </ul>
+            
           
         </p>
         
