@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Анкета за посетители</title>
+        <style type="text/css">
+        header{ border-style: dotted;
+        border-radius: 20%;
+        border-color: olive;
+background-color: lightgrey;
+            background-color: rgba(245, 197, 247, 0.514);
+        text-align: center;
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+        color: antiquewhite;
+        font-size:xx-large}
+        body{background-color:rgba(187, 255, 191, 0.322);
+        text-align: center;
+        font-size:large ;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;}
+        
+        </style>
+    </head>
+</html>
+
+<header>
+    
+    <h1>Анкета за посетители</h1>
+</header>
+
+<body>
+    <p><b>Внесете го вашето име и презиме</b></p>
+    <form>
+        <label for="fname">Име:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Презиме:</label><br>
+        <input type="text" id="lname" name="lname">
+      
+      <br><p><b>Пол:</b></p>
+      
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Машки</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Женски</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Друго</label>
+     
+      <br><p><b>Колку години имате?</b></p>
+      
+        <label for="age">Возраст:</label>
+        <input type="number" id="age" name="age" step="1">
+      
+      <br><p><b>Што би смениле за оваа веб страна?</b></p>
+      
+        <input type="checkbox" id="photos1" name="photos1" value="Photos">
+        <label for="photos1"> Би додал/а повеќе слики </label><br>
+        <input type="checkbox" id="text2" name="text2" value="Text">
+        <label for="text2"> Би додал/а повеќе текст/информации</label><br>
+        <input type="checkbox" id="design3" name="design3" value="Design">
+        <label for="design3"> Би го сменил/а дизајнот</label>
+      
+      <br><p><b>Внесете што највеќе ви се допадна на веб страната.</b></p>
+      
+        <label>
+            <textarea name="comment" rows="5" cols="40">Пишувајте овде.</textarea>
+        </label> 
+        <br>
+        <label for="vol"><b>Оценете ја веб страната (од 1 до 10):</b></label>
+  <input type="range" id="vol" name="vol" min="0" max="10">
+  <input type="submit">
+      </form>
+      
+</body>
