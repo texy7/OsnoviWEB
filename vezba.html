@@ -16,11 +16,10 @@
         color:black;
         font-size:150%;
         }
-        header  {background-color:  #ffc5d1cb;
+        h1  {background-color:  #ffc5d1cb;
         background-position: 1000px;
                  color: antiquewhite;
                  text-align: center;
-                 font-size: x-large;
                  font-family: Arial, Helvetica, sans-serif;
                  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.5);
                  border-radius: 30px;
@@ -80,12 +79,39 @@
         }
 
                     </style>
+                    <script type = "text/javascript">
+                        
+                         var name; 
+                         var now=new Date(); 
+                         var hour=now.getHours();
+                        
+                         
+                         name = window.prompt( "Здраво! Како е вашето име?" );
+                        
+                        if(hour < 12)
+                        {document.write( "<h1>Добро утро, " );
+                        }
+                         
+                        if(hour>=12)
+                        {
+                            hour=hour-12;
+
+                            if(hour<6)
+                            {
+                                document.write( "<h1>Добар ден, " );
+                            }
+                            else
+                            {
+                                document.write( "<h1>Добро вечер, " );
+                            }
+                        }
+                         
+                         document.writeln( name +
+                         ", добредојде на мојата прва веб страна!</h1>" );
+                        
+                         </script>
     </head>
 
-    <header>
-        <h1>Добредојдовте!</h1>
-        
-    </header>
 
     <body>
         <p class="border">Теа Димитровска</p>
