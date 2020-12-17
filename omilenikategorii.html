@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Tea's Favorite Categories</title>
+        <link rel = "stylesheet" type = "text/css" href = "vezbica.css">
         <style type="text/css">
         header{background-color: rgba(225, 240, 250, 0.63);
         height: 100px;
@@ -10,30 +11,36 @@
         border-radius: 30px;
         border-style: dotted;
         border-width: thick;
-        border-color:rgb(255, 219, 230);
+        border-color:rgb(0, 0, 0);
         font-size: x-large;
+        color:rgb(250, 225, 237) ;
+        -webkit-text-stroke:2.5px black;
         position: relative;
         font-family: Verdana, Geneva, Tahoma, sans-serif;}
-        body {background-image:url(https://forums.crackberry.com/attachments/blackberry-classic-f419/329464d1422143042t-nice-wallpapers-16-9.jpg);
+        body {background-image:url(https://i.pinimg.com/736x/d9/e4/e2/d9e4e2367996b7654092328eb4fbdef2.jpg);
         background-size: 100%;}
         section{
         text-align: start;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: large;
-        font-style: italic;}
+        font-style: italic;
+    }
         h2 {color: rgb(48, 77, 87);
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         background-color: rgba(255, 219, 230, 0.733);
         border-radius: 15px;}
-        div {
+        .slika {
   width: 150px;
   height: 230px;
   background: rgba(255, 163, 163, 0.486);
   transition: width 2s;
 }
-div:hover {
-  width: 300px;
-  height: 300px;
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background:  rgb(219, 245, 252);
+  margin-top: 20px;
 }
         </style>
     </head>
@@ -42,82 +49,209 @@ div:hover {
         <h1 style="size: 200%;">Омилени категории</h1>
     </header>
     <body>
-        <section id="1" style="float: left;"><h2 style="text-align: center; font-style: normal;">Филмови</h2>
-            <ol>
-                <li><a href = "https://www.imdb.com/title/tt0993846/">
-                    <div><img src = "https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_UX182_CR0,0,182,268_AL_.jpg" width = "150"
-                    height = "230" alt = "Links"></div> 
+        <section id="1" style=" margin-left: 550px; margin-right:550px; margin-top:50px;"><h2 style="text-align: center;"> Омилени филмови и ТВ серии</h2>
+           
+
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <a href = "https://www.imdb.com/title/tt0108778/?ref_=fn_al_tt_1">
+    <img src = "https://m.media-amazon.com/images/M/MV5BNDVkYjU0MzctMWRmZi00NTkxLTgwZWEtOWVhYjZlYjllYmU4XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY268_CR0,0,182,268_AL_.jpg" style="width:250px; height:300px;">
+</a>  
+</div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <a href = "https://www.imdb.com/title/tt0159206/">
+    <img src="https://m.media-amazon.com/images/M/MV5BNGEyNDRjM2QtY2VlYy00OWRhLWI4N2UtZTM4NDc0MGM0YzBkXkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_UX182_CR0,0,182,268_AL_.jpg" style="width:250px; height:300px;"></a>
+ 
+</div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <a href = "https://www.imdb.com/title/tt0944947/">
+    <img src="https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_UY268_CR7,0,182,268_AL_.jpg" style="width:250px; height:300px;">
+</a> 
+</div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <a href = "https://www.imdb.com/title/tt0993846/">
+    <img src="https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_UX182_CR0,0,182,268_AL_.jpg" style="width:250px; height:300px;">
+</a> 
+</div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <a href = "https://www.imdb.com/title/tt0112697/">
+    <img src="https://m.media-amazon.com/images/M/MV5BYzE4ZjMxMzUtZDQxZS00MjhhLWE2MmUtOTg0N2NkMTkxMzdhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg" style="width:250px; height:300px;">
+</a> 
+</div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <a href = "https://www.imdb.com/title/tt0091635/">
+    <img src="https://m.media-amazon.com/images/M/MV5BZjk0YmJkNjItNDY3Mi00ZWFiLWEwY2EtMDJlZWJlOWZkNzJlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg" style="width:250px; height:300px;">
+</a> 
+</div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+    <a href = "https://www.imdb.com/title/tt0108778/?ref_=fn_al_tt_1">
+                    <img class="demo cursor" src = "https://m.media-amazon.com/images/M/MV5BNDVkYjU0MzctMWRmZi00NTkxLTgwZWEtOWVhYjZlYjllYmU4XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY268_CR0,0,182,268_AL_.jpg" 
+                    onclick="currentSlide(1)" alt = "Friends">
                     </a>
-                <p>The Wolf of Wall Street (2013)</p></li>
-                <li><div><a href = "https://www.imdb.com/title/tt0112697/">
-                    <img src = "https://m.media-amazon.com/images/M/MV5BYzE4ZjMxMzUtZDQxZS00MjhhLWE2MmUtOTg0N2NkMTkxMzdhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg" width = "150"
-                    height = "230" alt = "Links">
-                    </a></div>
-                <p>9½ Weeks (1986)</p></li>
-                <li><div><a href = "https://www.imdb.com/title/tt0091635/">
-                    <img src = "https://m.media-amazon.com/images/M/MV5BZjk0YmJkNjItNDY3Mi00ZWFiLWEwY2EtMDJlZWJlOWZkNzJlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg" width = "150"
-                    height = "230" alt = "Links">
-                    </a></div>
-                <p>Basic Instinct (1992)</p></li>
-            </ol>
+      
+    </div>
+    <div class="column">
+      <a href = "https://www.imdb.com/title/tt0159206/">
+                    <img class="demo cursor" src = "https://m.media-amazon.com/images/M/MV5BNGEyNDRjM2QtY2VlYy00OWRhLWI4N2UtZTM4NDc0MGM0YzBkXkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_UX182_CR0,0,182,268_AL_.jpg" 
+                    onclick="currentSlide(2)" alt = "Sex and the City">
+                    </a>
+    </div>
+    <div class="column">
+        <a href = "https://www.imdb.com/title/tt0944947/">
+            <img class="demo cursor" src = "https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_UY268_CR7,0,182,268_AL_.jpg" 
+            onclick="currentSlide(3)" alt = "Game of Thrones">
+            </a>
+    </div>
+    <div class="column">
+        <a href = "https://www.imdb.com/title/tt0993846/">
+            <img class="demo cursor" src = "https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_UX182_CR0,0,182,268_AL_.jpg"
+            onclick="currentSlide(4)" alt = "The Wolf of Wall Street">
+            </a>
+    </div>
+    <div class="column">
+        <a href = "https://www.imdb.com/title/tt0112697/">
+            <img class="demo cursor" src = "https://m.media-amazon.com/images/M/MV5BYzE4ZjMxMzUtZDQxZS00MjhhLWE2MmUtOTg0N2NkMTkxMzdhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg" 
+            onclick="currentSlide(5)" alt = "9½ Weeks">
+            </a>
+    </div>    
+    <div class="column">
+        <a href = "https://www.imdb.com/title/tt0091635/">
+            <img class="demo cursor" src = "https://m.media-amazon.com/images/M/MV5BZjk0YmJkNjItNDY3Mi00ZWFiLWEwY2EtMDJlZWJlOWZkNzJlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg" 
+            onclick="currentSlide(6)" alt = "Basic Instinct">
+            </a>
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
         </section>
 
-        <section id="2" style="float: right;"><h2 style="text-align: center; font-style: normal;">Серии</h2>
-            <ol>
-                <li><div><a href = "https://www.imdb.com/title/tt0944947/">
-                    <img src = "https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_UY268_CR7,0,182,268_AL_.jpg" width = "150"
-                    height = "230" alt = "Links">
-                    </a></div>
-                <p>Game of Thrones </p></li>
-                <li><div><a href = "https://www.imdb.com/title/tt0159206/">
-                    <img src = "https://m.media-amazon.com/images/M/MV5BNGEyNDRjM2QtY2VlYy00OWRhLWI4N2UtZTM4NDc0MGM0YzBkXkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_UX182_CR0,0,182,268_AL_.jpg" width = "150"
-                    height = "230" alt = "Links">
-                    </a></div>
-                <p>Sex and the City</p></li>
-                <li><div><a href = "https://www.imdb.com/title/tt0108778/?ref_=fn_al_tt_1">
-                    <img src = "https://m.media-amazon.com/images/M/MV5BNDVkYjU0MzctMWRmZi00NTkxLTgwZWEtOWVhYjZlYjllYmU4XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY268_CR0,0,182,268_AL_.jpg" width = "150"
-                    height = "230" alt = "Links">
-                    </a></div>
-                <p>Friends</p></li>
-            </ol>
+        
+            
         </section>
             
         <section id="3" style="text-align: center;"><h2 style="text-align: center; margin-left: 550px; margin-right:550px; margin-top:50px; font-style: normal;">Книги</h2>
-            <ol>
-                <li><a href = "https://kultura.com.mk/en/book/the-romanov-empress/">
+            
+               <div><a href = "https://kultura.com.mk/en/book/the-romanov-empress/">
                     <img src = "https://kultura.com.mk/wp-content/uploads/2019/01/91-1.jpg" width = "150"
                     height = "230" alt = "Links">
-                    </a>
-                <p>Царицата Романова</p></li>
-                <li><a href = "https://sakamknigi.mk/product/shepkacot/">
+                    </a></div>
+                <p>Царицата Романова</p>
+                <div><a href = "https://sakamknigi.mk/product/shepkacot/">
                     <img src = "https://sakamknigi.mk/wp-content/uploads/2012/07/Sepkacot.jpg" width = "150"
                     height = "230" alt = "Links">
-                    </a>
-                <p>Шепкачот</p></li>
-                <li><a href = "https://sakamknigi.mk/product/nekoj-sto-vredi-da-umre/">
+                    </a></div>
+                <p>Шепкачот</p>
+                <div><a href = "https://sakamknigi.mk/product/nekoj-sto-vredi-da-umre/">
                     <img src = "https://sakamknigi.mk/wp-content/uploads/2015/09/5.jpg" width = "150"
                     height = "230" alt = "Links">
-                    </a>
-                <p>Некој што вреди да умре</p></li>
-            </ol>
+                    </a></div>
+                <p>Некој што вреди да умре</p>
+            
         </section>
-        <section id="4" style="float: left;"><h2 style="text-align: center; font-style: normal;">Музика</h2>
-            <ol>
-                <li><a href = "https://www.youtube.com/watch?v=9iHiFsnnI5I">
-                    <p>Nina Kraviz - Tanya</p>
-                    </a>
-                </li>
-                <li><a href = "https://www.youtube.com/watch?v=9GMjH1nR0ds">
-                    <p>New Order - Blue Monday 88</p>
-                    </a>
-                </li>
-                <li><a href = "https://www.youtube.com/watch?v=4vKsSGyQf-M">
-                    <p>Chris Isaak - Wicked Game</p>
-                    </a>
-                </li>
-            </ol>
+        <section id="4" ><h2 style="text-align: center; font-style: normal;">Музика</h2>
+           
+            <iframe id="player" type="text/html" width="560" height="315"
+  src="https://www.youtube.com/embed/9GMjH1nR0ds"
+  frameborder="0"></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/F93ywiGMDnQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/zMNZ5Gw3Zbg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/vm5iK_tNWAg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <script>
+                // 2. This code loads the IFrame Player API code asynchronously.
+                var tag = document.createElement('script');
+          
+                tag.src = "https://www.youtube.com/iframe_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+          
+                // 3. This function creates an <iframe> (and YouTube player)
+                //    after the API code downloads.
+                var player;
+                function onYouTubeIframeAPIReady() {
+                  player = new YT.Player('player', {
+                    height: '390',
+                    width: '640',
+                    videoId: 'M7lc1UVf-VE',
+                    events: {
+                      'onReady': onPlayerReady,
+                      'onStateChange': onPlayerStateChange
+                    }
+                  });
+                }
+          
+                // 4. The API will call this function when the video player is ready.
+                function onPlayerReady(event) {
+                  event.target.playVideo();
+                }
+          
+                // 5. The API calls this function when the player's state changes.
+                //    The function indicates that when playing a video (state=1),
+                //    the player should play for six seconds and then stop.
+                var done = false;
+                function onPlayerStateChange(event) {
+                  if (event.data == YT.PlayerState.PLAYING && !done) {
+                    setTimeout(stopVideo, 6000);
+                    done = true;
+                  }
+                }
+                function stopVideo() {
+                  player.stopVideo();
+                }
+              </script>
         </section>
-        <section id="5" style="float: right;"><h2 style="text-align: center; font-style: normal;">Актери</h2>
+        <section id="5" ><h2 style="text-align: center; font-style: normal;">Актери</h2>
             <ol>
                 <li><a href = "https://en.wikipedia.org/wiki/Mickey_Rourke">
                     <p>Mickey Rourke</p>
@@ -133,6 +267,12 @@ div:hover {
                 </li>
             </ol>
         </section>
+        
     </body>
-
+<footer>
+    <div class="footer">
+        <h4>© 2020, Теа Димитровска</h4>
+        <p><a href="vezba.html"><b>Дома  </b></a><a href="blog.html"><b>  Блог </b></a><a href="Galerija.html"><b>  Галерија </b></a><a href="omilenikategorii.html"><b>  Омилени категории </b></a><a href="Анкета.html"><b>  Анкета </b><a href="kontakt.html"><b>  Контакт  </b></a></p>
+    </div>
+</footer>
 </html>

@@ -1,49 +1,228 @@
 <!DOCTYPE html>
 <html>
+    
     <head>
-        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta content="to-do list, html5, example" name="keywords">
+        <meta content="A simple example that uses many HTML5 features such as local storage, CSS3 selectors, web fonts, and more." name="description">
         <title>Tea's Blog</title>
-        <style type="text/css">
-        header{background-color: rgb(197, 228, 247);
-        text-align: center;
-        position: relative;}
-        section{background-color:rgb(247, 247, 224);
-            margin-left: 200px;
-            margin-right: 200px;
-        text-align: start;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;}
-        </style>
-    </head>
-</html>
+        <link rel = "stylesheet" type = "text/css" href = "blog.css">
+        <div id="fb-root"></div>
+        
+        <script>function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+          
+            if (dots.style.display === "none") {
+              dots.style.display = "inline";
+              btnText.innerHTML = "Прочитај повеќе";
+              moreText.style.display = "none";
+            } else {
+              dots.style.display = "none";
+              btnText.innerHTML = "Сокри текст";
+              moreText.style.display = "inline";
+            }
+          }
+          
+</script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="yW9L8iUf"></script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="LTj5MpGg"></script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="HYHSCKb3"></script>
+<script>function commentPreview(a) {
+  var name=document.getElementById("name").value;
+  var komentar = document.getElementById("previewbox");
+  var novkomentar = document.createElement("li");
+  novkomentar.innerHTML = name + " says: " + document.getElementById("comm").value;
+  komentar.appendChild(novkomentar);
+}
+
+function clickCounter(id, label) {
+      var node = document.getElementById(id);
+      if (!node) {
+        return console.error('Element #' + id + ' not found');
+      }
+
+      if (window.localStorage === undefined) {
+        node.innerHTML = 'Sorry, your browser does not support web storage...';
+      } else {
+        var key = 'clickcount_' + id;
+        localStorage[key] = (++localStorage[key] || 1);
+        node.innerHTML = 'Оваа статија им се допаѓа на:' + ' ' + localStorage[key];
+      }
+    }
+
+</script>
+
+</head>
+
 
 <header>
     <h1>Мојот блог</h1>
 </header>
 
 <body>
-    <section id="1">
-        <h2>Како да направите здрави мафини со цимет?</h2>
-        <p>
-            BHJHJGFGHGHKUGJFHHKHGJFHHGHHKGH
-            HGFGUKGHJ
-            YGGJHGHJGKHKJG
-            FGKHJGHCJGKHJ
-            FTUKFYJGDHDJFKGFHJGFKGUFHJGG
-            GJFGUKFJGCJFGKUHJGCHKGHJGCJKGJHGKJ
-        </p>
-    </section>
+      <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            <h2>Моите омилени модни креации од сезоната Пролет/Лето 20/21</h2>
+            <h5>Три најубави за мене креации од едни од моите омилени модни дизајнери, Dec 15, 2020</h5>
+            <p>Секоја модна сезона за себе е посебна но после светска криза и пандемија, како и се останато се промени и погледот на дизајнерите. <span id="dots">...</span><span id="more"> Може да се забележат значителни промени: се повеќе дизајнери се стремат кон еколошки и поздрави решенија за околината, поедноставен и минималистички стил, како и се поголема дигитализација со воведување на можности за виртуелно пробување на облеката и сл.</span></p>
+            <button onclick="myFunction()" id="myBtn">Прочитај повеќе</button>
+            <p><button onclick="clickCounter('result10', this.innerHTML)" type="button" style="background-color: rgb(196, 0, 0);color: white;border-color: rgb(116, 15, 15);"><b>Ми се допаѓа оваа статија</b></button></p>
+          <div id="result10"></div>
+            <p><div class="fb-post" data-href="https://www.facebook.com/chanel/photos/a.188926299234/10159150534459235/" data-show-text="true" data-width=""><blockquote cite="https://www.facebook.com/chanel/photos/a.188926299234/10159150534459235/?type=3" class="fb-xfbml-parse-ignore">Posted by <a href="https://www.facebook.com/chanel/">CHANEL</a> on&nbsp;<a href="https://www.facebook.com/chanel/photos/a.188926299234/10159150534459235/?type=3">Friday, December 4, 2020</a></blockquote></div></p>
+            <p><div class="fb-post" data-href="https://www.facebook.com/Dior/photos/a.118443131543694/3523935897661050/" data-show-text="true" data-width=""><blockquote cite="https://www.facebook.com/Dior/photos/a.118443131543694/3523935897661050/?type=3" class="fb-xfbml-parse-ignore">Posted by <a href="https://www.facebook.com/Dior/">Dior</a> on&nbsp;<a href="https://www.facebook.com/Dior/photos/a.118443131543694/3523935897661050/?type=3">Wednesday, November 11, 2020</a></blockquote></div></p>
+            <p><div class="fb-post" data-href="https://www.facebook.com/JACQUEMUSPARIS/photos/a.122236141164195/3195499950504450/" data-show-text="true" data-width=""><blockquote cite="https://www.facebook.com/JACQUEMUSPARIS/photos/a.122236141164195/3195499950504450/?type=3" class="fb-xfbml-parse-ignore">Posted by <a href="https://www.facebook.com/JACQUEMUSPARIS/">JACQUEMUS</a> on&nbsp;<a href="https://www.facebook.com/JACQUEMUSPARIS/photos/a.122236141164195/3195499950504450/?type=3">Thursday, July 9, 2020</a></blockquote></div></p>
+        </div>
+          <div class="card">
+            <h2>Направете си ваша To-Do листа!</h2>
+            <h5>Навратете се кога сакате на овој блог за да се потсетите на вашите обврски, Dec 10, 2020</h5>
+            <p><button onclick="clickCounter('result11', this.innerHTML)" type="button" style="background-color: rgb(196, 0, 0);color: white;border-color: rgb(116, 15, 15);"><b>Ми се допаѓа оваа статија</b></button></p>
+          <div id="result11"></div>
+            <div id="contentMain">
+                <h2 style="background-color: rgb(249, 250, 215); text-align: center;">Мојата To-Do Листа</h2>
+                <ol id="myList" contenteditable="false">
+                <li>Направи нешто!</li>
+                </ol>
+                <input id="editToggleButton" type="button" value="Edit" />
+                <input id="resetButton" type="button" value="Reset" />
+                </div>
+                <script>
 
-    <section id="2">
-        <h2>Колку..................</h2>
-        <p>vsqwkgwhghfyuyyfdfghytfkyyk<br>
-        jsdkwndkwjdnwkjd</p>
+                  var editToggleButton = document.getElementById("editToggleButton");
+                  var resetButton= document.getElementById("resetButton");
+                  
+                  editToggleButton.addEventListener('click', toggleEditingContent, false);
+                  resetButton.addEventListener('click', resetContent, false);
+                  
+                  document.addEventListener("DOMContentLoaded", restoreContents, false);
+                  
+                  function saveContents() {
+                  
+                      var listOfThingsToDo = document.getElementById("myList").innerHTML;
+                      localStorage["myToDoList"] = listOfThingsToDo;
+                  }
+                  
+                  function restoreContents() 
+                  {
+                      var mySavedList = localStorage["myToDoList"];
+                        
+                      if (mySavedList != undefined) {
+                          document.getElementById("myList").innerHTML = mySavedList;
+                      }
+                  }
+                  
+                  function toggleEditingContent(e) {
+                  
+                      var myList = document.getElementById("myList");
+                  
+                      if (myList.contentEditable == "false") {
+                          myList.setAttribute("contentEditable", true);
+                  
+                          editToggleButton.value = "Save";
+                          
+                          myList.focus();
+                  
+                      } else {
+                          myList.setAttribute("contentEditable", false);
+                  
+                          editToggleButton.value = "Edit";
+                          saveContents();
+                      }
+                  }
+                  
+                  function resetContent(e) {
+                  
+                    localStorage.clear();
+                    
+                    window.location.reload();
+                  }
+                
+                </script>
+          </div>
+          <div class="card">
+            <h2>Рецепт за празнични коктели</h2>
+            <h5>Преземан од Кафе Пауза, овој рецепт е нешто што мора да го пробате во празничните денови!, Dec 12, 2020</h5>
+            <p><button onclick="clickCounter('result12', this.innerHTML)" type="button" style="background-color: rgb(196, 0, 0);color: white;border-color: rgb(116, 15, 15);"><b>Ми се допаѓа оваа статија</b></button></p>
+            <div id="result12"></div>
+            <iframe class="border" id="myFrame" src="https://www.kafepauza.mk/zivot/martini-so-kokos-recept-za-neodolivo-kremast-zimski-koktel/"
+  style="height:400px;width:50%"></iframe>
+          </div>
+          <div class="card">
+          <script>
+             function updateText() {
+      var ime = document.getElementById("test3").value;
+      var prezime = document.getElementById("test4").value;
+      var data = document.getElementById("test5").value;
+      var paragraf = document.getElementById("text").value;
 
-    </section>
-    <section id="3">
-        <h2>...................?</h2>
-        <p>vsqwkgwhghfyuyyfdfghytfkyyk<br>
-        jsdkwndkwjdnwkjd</p>
-
-    </section>
+      var txt1 = "<p></p>" + ime + " " + prezime + " " + data;
+      var txt2 = $("<p></p>").text(paragraf);
+      $(document).ready(function () {
+        $("#btn1").onclick(function () {
+          $("#blabla").prepend(txt1, txt2);
+        });
+      });
+      $("#blabla").prepend(txt1, txt2);
+    }; </script>
+          <div id="blabla" class="div1">
+          <fieldset style="background-color: lightyellow;">
+            <h3><em>Mесто за креативно изразување:</em></h3>
+            <p>Име: <input type="text" id="test3"></p>
+            <p>Презиме: <input type="text" id="test4"></p>
+            <p>Дата: <input type="text" id="test5" value="DD/MM/YY"></p>
+            <section>
+              <form>
+                <textarea id="text" class="blogbox" maxlength="500" rows="10" cols="100">
+             </textarea>
+              </form>
+              <button id="btn2" style="float: left;">Delete comments</button>
+            </section>
     
+            <button id="btn1" onclick="updateText()">Submit</button>
+          </fieldset>
+        </div>
+          </div>
+        </div>
+        <div class="rightcolumn">
+          <div class="card">
+            <h2>За мене</h2>
+            <div><img src=meblog.jpg style="height: 170px; width: 120px;"></div>
+            <p>Дознајте повеќе за мене со враќање на <a href="vezba.html"><b>главната</b></a> страна...</p>
+          </div>
+          <div class="card">
+            <h3>Popular Post</h3>
+            <div class="fakeimg">Image</div><br>
+            <div class="fakeimg">Image</div><br>
+            <div class="fakeimg">Image</div>
+          </div>
+          <div class="card">
+            <h3>Вашето мислење значи:</h3>
+            <form action="#">
+              <fieldset style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold; background-image: url(https://st2.depositphotos.com/4440797/6583/v/950/depositphotos_65833919-stock-illustration-seamless-floral-pattern-with-flowers.jpg);" >
+                <label for="name">Вашето име:</label>
+                <input type="text" id="name"></input> <br>
+                <label for="comment">Оставете коментар:</label>
+                <input type="text" id="comm" value=" "></input>
+                <button onclick="commentPreview()">Прати</button>
+              </fieldset>
+            </form>
+            <ul id="previewbox">
+              <p>Коментари:</p>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer">
+        <h4>© 2020, Теа Димитровска</h4>
+        <p><a href="vezba.html"><b>Дома  </b></a><a href="blog.html"><b>  Блог </b></a><a href="Galerija.html"><b>  Галерија </b></a><a href="omilenikategorii.html"><b>  Омилени категории </b></a><a href="Анкета.html"><b>  Анкета </b><a href="kontakt.html"><b>  Контакт  </b></a></p>
+      </div>
+    
+      
+
 </body>
+</html>

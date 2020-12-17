@@ -1,0 +1,128 @@
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #fcfadc;
+}
+
+header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background-image: url(https://st2.depositphotos.com/4440797/6583/v/950/depositphotos_65833919-stock-illustration-seamless-floral-pattern-with-flowers.jpg);
+  -webkit-text-stroke: 2.5px rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 40px;
+  ;
+}
+
+
+.leftcolumn {
+  float: left;
+  width: 70%;
+}
+
+.rightcolumn {
+  float: right;
+  width: 20%;
+  padding-left: 20px;
+}
+
+.fakeimg {
+  background-color: rgb(255, 217, 235);
+  width: 80%;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background:  rgb(219, 245, 252);
+  margin-top: 20px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+            #more {display: none;}
+            #contentMain #myList[contentEditable=false] {
+	background-color: #F5FBFE;
+}
+
+#contentMain #myList[contentEditable=true] {
+    background-color: #FFFFFF;
+}
+
+#contentMain #myList {
+	border-radius: 3px;
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	padding-left: 60px;
+}
+
+#contentMain {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	padding: 40px;
+	border-radius: 3px;
+	background-color: #D9EFFD;
+	width: 300px;
+}
+
+
+#myList li {
+	padding: 10px 10px 10px 5px;
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: x-large;
+}
+
+input[type=button] {
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+	font-weight: bold;
+	border-radius: 3px;
+	padding: 5px;
+	font-size: large;
+}
+
+#resetButton {
+	background-color: #ffadcc;
+	border: 2px solid #ffb1d8;
+}
+#editToggleButton{
+	background-color: #eeffaf;
+	border: 2px solid #95BF00;
+	margin-right: 10px;	
+}
+
+#resetButton:hover {
+	background-color: #ffb1bb;
+	cursor: pointer;
+}
+#editToggleButton:hover {
+	background-color: #95BF00;
+	cursor: pointer;
+}
+button {
+    background-color: rgb(255, 194, 227);
+    border-radius: 20px;
+    border-color: rgb(92, 32, 72);
+    font-weight: bold;
+    
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgb(243, 134, 210);
+}

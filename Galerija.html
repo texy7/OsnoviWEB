@@ -1,138 +1,248 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Tea's Gallery</title>
-        <style type="text/css">
-        header{background-color: rgba(244, 247, 197, 0.726);
-        border-radius: 10%;
-        border-style:solid;
-        border-width: 300%;
-        border-color: lightsalmon;
-        text-align: center;
-        padding: 20px;
-        -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.5);
-        color: lightsalmon;
-        font-size:xx-large;
-        position: relative;}
-        body{background-color:rgba(255, 173, 173, 0.527);
-        text-align: center;
-        font-size: medium ;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;}
-        .column {
-                    float: left;
-                    width: 25%;
-                    padding: 0px;
-                    }
-        .row:after {
-        content: "";
-        display: table;
-        clear: both;
-        }
 
-        </style>
-        <script type="text/javascript">
+<head>
+  <meta charset="utf-8">
+  <title>Tea's Gallery</title>
+  <style type="text/css">
+    header {
+      background-color: rgba(244, 247, 197, 0.726);
+      border-radius: 10%;
+      border-style: solid;
+      border-width: 300%;
+      border-color: lightsalmon;
+      text-align: center;
+      padding: 20px;
+      -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.5);
+      color: lightsalmon;
+      font-size: xx-large;
+      position: relative;
+    }
+
+    body {
+      background-color: rgba(255, 173, 173, 0.527);
+      text-align: center;
+      font-size: medium;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .column {
+      float: left;
+      width: 25%;
+      padding: 0px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .footer {
+  padding: 20px;
+  text-align: center;
+  background:  rgb(219, 245, 252);
+  margin-top: 20px;
+}
+  </style>
   
-          function onClick(postId) {      
-              document.getElementById("clicks" + postId).innerHTML = parseInt(document.getElementById("clicks" + postId).innerHTML) + 1
-         
-          };
-          </script>
-          <script type="text/javascript">
-            window.onload = function one() {
-                function commentPreview(){
-                    document.getElementById("previewbox").innerHTML = document.getElementById("comment").value;
-                    return false;
-                }
-                document.getElementById("preview").onclick = commentPreview;
-            }
-        </script>
+  <script type="text/javascript">
 
-    </head>
+
+    function commentPreview(a) {
+      var name=document.getElementById("name").value;
+      var komentar = document.getElementById("previewbox" + a);
+      var novkomentar = document.createElement("li");
+      novkomentar.innerHTML = name + " says: " + document.getElementById("comm" + a).value;
+      komentar.appendChild(novkomentar);
+    }
+
+    function clickCounter(id, label) {
+      var node = document.getElementById(id);
+      if (!node) {
+        return console.error('Element #' + id + ' not found');
+      }
+
+      if (window.localStorage === undefined) {
+        node.innerHTML = 'Sorry, your browser does not support web storage...';
+      } else {
+        var key = 'clickcount_' + id;
+        localStorage[key] = (++localStorage[key] || 1);
+        node.innerHTML = 'Likes:' + ' ' + localStorage[key];
+      }
+    }
+
+  </script>
+
+</head>
 
 </html>
 
 <header>
-    <h1>Галерија</h1>
+  <h1>Галерија</h1>
 </header>
 
 <body>
-    <div class="row">
-  <div class="column">
-    <p><em>Москва, 15.04.2019</em></p>
-    <p><img src="C:\Users\irina\OneDrive\Desktop\Proekt\123042286_398572964633948_492649139059454545_n.jpg" width="350" height="500" alt=rusija></p>
-    <button  type="button" onClick="onClick(1)">Click me</button>
-    <p>Likes: <a id="clicks1">0</a></p>
-    <form action="" method="post">
-      <fieldset>
-          <label for="comment" >Leave a comment</label>
-          <textarea name="comment" cols="20" rows="5" id="comment" ></textarea>
-          <input name="preview" type="submit" value="Send comment" id="preview" >
-      </fieldset>
-  </form>
-
-    <div id="previewbox" ></div>
-  </div>
-  
-  </div>
-  
-  
-  <div class="column">
-    <p><em>Виена, 20.10.2019</em></p>
-    <p><img src="C:\Users\irina\OneDrive\Desktop\Proekt\122966657_816258765803039_5212280743331843898_n.jpg" width="350" height="500" alt=austria></p>
-    <button  type="button" onClick="onClick(2)">Click me</button>
-    <p>Likes: <a id="clicks2">0</a></p>
-    <form action="" method="post">
-      <fieldset>
-          <label for="comment">Leave a comment</label>
-          <textarea name="comment" cols="20" rows="5" id="comment" commentPreview="commentPreview"></textarea>
-          <input name="preview" type="submit" value="Send comment" id="preview" >
-      </fieldset>
-  </form>
-  <div id="previewbox" commentPreview="commentPreview"></div>
-    
-  </div>
-  
-  <div class="column">
-    <p><em>Кортина Д‘ампецо, 25.02.2020</em></p>
-    <p><img src="C:\Users\irina\OneDrive\Desktop\Proekt\122901768_351322739458068_5433547107432232043_n.jpg" width="350" height="500" alt=italia></p>
-    <button  type="button" onClick="onClick(3)">Click me</button>
-    <p>Likes: <a id="clicks3">0</a></p>
-  </div>
-  <div class="column">
-    <p><em>Скопје, 20.09.2020</em></p>
-    <p><img src="https://scontent.fskp4-2.fna.fbcdn.net/v/t1.15752-9/122779210_3593491060681680_7200098149498633876_n.jpg?_nc_cat=109&ccb=2&_nc_sid=ae9488&_nc_ohc=RHv-PGU6-2QAX8KIf3N&_nc_ht=scontent.fskp4-2.fna&oh=ff26398e15e4e3ecc56f4c30a2b7805c&oe=5FBF64F4" width="350" height="500" alt=italia></p>
-    <button  type="button" onClick="onClick(4)">Click me</button>
-    <p>Likes: <a id="clicks4">0</a></p>
-  </div>
-    </div>
   <div class="row">
     <div class="column">
-        <p><em>Марков Манастир, 23.10.2020</em></p>
-        <p><img src="https://scontent.fskp4-1.fna.fbcdn.net/v/t1.15752-9/122867744_776453313199792_2588996220567204568_n.jpg?_nc_cat=107&ccb=2&_nc_sid=ae9488&_nc_ohc=BEf1soAzsy4AX_eINgU&_nc_ht=scontent.fskp4-1.fna&oh=75cf368ad1258476454b2bf8783b01bb&oe=5FBF6C86" width="350" height="500" alt=italia></p>
-        <button  type="button" onClick="onClick(5)">Click me</button>
-    <p>Likes: <a id="clicks5">0</a></p>
-      </div>
-      <div class="column">
-        <p><em>Барселона, 14.07.2019</em></p>
-        <p><img src="https://scontent.fskp4-2.fna.fbcdn.net/v/t1.15752-9/123082493_3226929440751608_3702344619615377887_n.jpg?_nc_cat=108&ccb=2&_nc_sid=ae9488&_nc_ohc=bJQePxl9yDoAX-SOCtH&_nc_ht=scontent.fskp4-2.fna&oh=9be24c0732d2cb11ee906bd3d955c33a&oe=5FBEC504" width="350" height="500" alt=italia></p>
-        <button  type="button" onClick="onClick(6)">Click me</button>
-    <p>Likes: <a id="clicks6">0</a></p>
-      </div>
-      <div class="column">
-        <p><em>Милано, 15.04.2018</em></p>
-        <p><img src="C:\Users\irina\OneDrive\Desktop\Proekt\Screenshot (1).png" width="350" height="500" alt=italia></p>
-        <button  type="button" onClick="onClick(7)">Click me</button>
-    <p>Likes: <a id="clicks7">0</a></p>
-      </div>
-      <div class="column">
-        <p><em>Мадрид, 18.10.2018 </em></p>
-        <p><img src="C:\Users\irina\OneDrive\Desktop\Proekt\Screenshot (3).png" width="350" height="500" alt=italia></p>
-        <button  type="button" onClick="onClick(8)">Like</button>
-    <p>Likes: <a id="clicks8">0</a></p>
-      </div>
+      <p><em>Москва, 15.04.2019</em></p>
+      <p><img src="C:\Users\irina\OneDrive\Desktop\Proekt\123042286_398572964633948_492649139059454545_n.jpg"
+          width="350" height="500" alt=rusija></p>
+          <p><button onclick="clickCounter('result1', this.innerHTML)" type="button"><b>Like </b></button></p>
+          <div id="result1"></div>
+      <form action="#">
+        <fieldset>
+          <label for="name">Your name:</label>
+          <input type="text" id="name"></input> <br>
+          <label for="comment">Leave a comment:</label>
+          <input type="text" id="comm1" value=" "></input>
+          <button onclick="commentPreview(1)">Submit</button>
+        </fieldset>
+      </form>
+      <ul id="previewbox1">
+        <p>Comments:</p>
+      </ul>
+
+    </div>
+
+
+
+
+    <div class="column">
+      <p><em>Виена, 20.10.2019</em></p>
+      <p><img src="C:\Users\irina\OneDrive\Desktop\Proekt\122966657_816258765803039_5212280743331843898_n.jpg"
+          width="350" height="500" alt=austria></p>
+      <p><button onclick="clickCounter('result0', this.innerHTML)" type="button"><b>Like </b></button></p>
+      <div id="result0"></div>
+      <form action="#">
+        <fieldset>
+          <label for="name">Your name:</label>
+          <input type="text" id="name"></input> <br>
+          <label for="comment">Leave a comment</label>
+          <input type="text" id="comm2" value=" "></input>
+          <button onclick="commentPreview(2)">Submit</button>
+        </fieldset>
+      </form>
+      <ul id="previewbox2">
+        <p>Comments:</p>
+      </ul>
+    </div>
+
+    <div class="column">
+      <p><em>Кортина Д‘ампецо, 25.02.2020</em></p>
+      <p><img src="C:\Users\irina\OneDrive\Desktop\Proekt\122901768_351322739458068_5433547107432232043_n.jpg"
+          width="350" height="500" alt=italia></p>
+          <p><button onclick="clickCounter('result2', this.innerHTML)" type="button"><b>Like </b></button></p>
+          <div id="result2"></div>
+      <form action="#">
+        <fieldset>
+          <label for="name">Your name:</label>
+          <input type="text" id="name"></input> <br>
+          <label for="comment">Leave a comment</label>
+          <input type="text" id="comm3" value=" "></input>
+          <button onclick="commentPreview(3)">Submit</button>
+        </fieldset>
+      </form>
+      <ul id="previewbox3">
+        <p>Comments:</p>
+      </ul>
+    </div>
+    <div class="column">
+      <p><em>Скопје, 20.09.2020</em></p>
+      <p><img src="C:\Users\irina\OneDrive\Desktop\Proekt\meandmedi.jpg" width="350" height="500" alt=italia></p>
+      <p><button onclick="clickCounter('result3', this.innerHTML)" type="button"><b>Like </b></button></p>
+      <div id="result3"></div>
+      <form action="#">
+        <fieldset>
+          <label for="name">Your name:</label>
+          <input type="text" id="name"></input> <br>
+          <label for="comment">Leave a comment</label>
+          <input type="text" id="comm4" value=" "></input>
+          <button onclick="commentPreview(4)">Submit</button>
+        </fieldset>
+      </form>
+      <ul id="previewbox4">
+        <p>Comments:</p>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <p><em>Марков Манастир, 23.10.2020</em></p>
+      <p><img src="C:\Users\irina\OneDrive\Desktop\Proekt\markovmanastir.jpg" width="350" height="500" alt=italia></p>
+      <p><button onclick="clickCounter('result4', this.innerHTML)" type="button"><b>Like </b></button></p>
+      <div id="result4"></div>
+      <form action="#">
+        <fieldset>
+          <label for="name">Your name:</label>
+          <input type="text" id="name"></input> <br>
+          <label for="comment">Leave a comment</label>
+          <input type="text" id="comm5" value=" "></input>
+          <button onclick="commentPreview(5)">Submit</button>
+        </fieldset>
+      </form>
+      <ul id="previewbox5">
+        <p>Comments:</p>
+      </ul>
+    </div>
+    <div class="column">
+      <p><em>Барселона, 14.07.2019</em></p>
+      <p><img src="C:\Users\irina\OneDrive\Desktop\Proekt\barcelona3.jpg" width="350" height="500" alt=italia></p>
+      <p><button onclick="clickCounter('result5', this.innerHTML)" type="button"><b>Like </b></button></p>
+      <div id="result5"></div>
+      <form action="#">
+        <fieldset>
+          <label for="name">Your name:</label>
+          <input type="text" id="name"></input> <br>
+          <label for="comment">Leave a comment</label>
+          <input type="text" id="comm6" value=" "></input>
+          <button onclick="commentPreview(6)">Submit</button>
+        </fieldset>
+      </form>
+      <ul id="previewbox6">
+        <p>Comments:</p>
+      </ul>
+    </div>
+    <div class="column">
+      <p><em>Милано, 15.04.2018</em></p>
+      <p><img src="C:\Users\irina\OneDrive\Desktop\Proekt\Screenshot (1).png" width="350" height="500" alt=italia></p>
+      <p><button onclick="clickCounter('result6', this.innerHTML)" type="button"><b>Like </b></button></p>
+      <div id="result6"></div>
+      <form action="#">
+        <fieldset>
+          <label for="name">Your name:</label>
+          <input type="text" id="name"></input> <br>
+          <label for="comment">Leave a comment</label>
+          <input type="text" id="comm7" value=" "></input>
+          <button onclick="commentPreview(7)">Submit</button>
+        </fieldset>
+      </form>
+      <ul id="previewbox7">
+        <p>Comments:</p>
+      </ul>
+    </div>
+    <div class="column">
+      <p><em>Мадрид, 18.10.2018 </em></p>
+      <p><img src="C:\Users\irina\OneDrive\Desktop\Proekt\Screenshot (3).png" width="350" height="500" alt=italia></p>
+      <p><button onclick="clickCounter('result7', this.innerHTML)" type="button"><b>Like </b></button></p>
+      <div id="result7"></div>
+      <form action="#">
+        <fieldset>
+          <label for="name">Your name:</label>
+          <input type="text" id="name"></input><br>
+          <label for="comment">Leave a comment</label>
+          <input type="text" id="comm8" value=" "></input>
+          <button onclick="commentPreview(8)">Submit</button>
+        </fieldset>
+      </form>
+      <ul id="previewbox8">
+        <p>Comments:</p>
+      </ul>
+    </div>
 
   </div>
- 
+  <div class="footer">
+    <h4>© 2020, Теа Димитровска</h4>
+    <p><a href="vezba.html"><b>Дома  </b></a><a href="blog.html"><b>  Блог </b></a><a href="Galerija.html"><b>  Галерија </b></a><a href="omilenikategorii.html"><b>  Омилени категории </b></a><a href="Анкета.html"><b>  Анкета </b><a href="kontakt.html"><b>  Контакт  </b></a></p>
+  </div>
 
 </body>
