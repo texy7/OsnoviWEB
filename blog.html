@@ -55,7 +55,35 @@ function clickCounter(id, label) {
     }
 
 </script>
+<script>
+  function updateText() {
+var ime = document.getElementById("test3").value;
+var prezime = document.getElementById("test4").value;
+var data = document.getElementById("test5").value;
+var paragraf = document.getElementById("text").value;
 
+var txt1 = "<p></p>" + ime + " " + prezime + " " + data;
+var txt2 = $("<p></p>").text(paragraf);
+$(document).ready(function () {
+$("#kopce1").onclick(function () {
+$("#klasablog").prepend(txt1, txt2);
+});
+});
+$("#klasablog").prepend(txt1, txt2);
+}; </script>
+<script>
+$(document).ready(function () {
+$("#flip").click(function () {
+$("#panel").slideToggle("slow");
+});
+});
+
+$(document).ready(function () {
+$("#kopce2").mouseover(function () {
+$("#klasablog ").empty();
+});
+});
+</script>
 </head>
 
 
@@ -152,23 +180,9 @@ function clickCounter(id, label) {
   style="height:400px;width:50%"></iframe>
           </div>
           <div class="card">
-          <script>
-             function updateText() {
-      var ime = document.getElementById("test3").value;
-      var prezime = document.getElementById("test4").value;
-      var data = document.getElementById("test5").value;
-      var paragraf = document.getElementById("text").value;
-
-      var txt1 = "<p></p>" + ime + " " + prezime + " " + data;
-      var txt2 = $("<p></p>").text(paragraf);
-      $(document).ready(function () {
-        $("#btn1").onclick(function () {
-          $("#blabla").prepend(txt1, txt2);
-        });
-      });
-      $("#blabla").prepend(txt1, txt2);
-    }; </script>
-          <div id="blabla" class="div1">
+          
+          <div id="klasablog" class="div1">
+          </div>
           <fieldset style="background-color: lightyellow;">
             <h3><em>Mесто за креативно изразување:</em></h3>
             <p>Име: <input type="text" id="test3"></p>
@@ -179,12 +193,12 @@ function clickCounter(id, label) {
                 <textarea id="text" class="blogbox" maxlength="500" rows="10" cols="100">
              </textarea>
               </form>
-              <button id="btn2" style="float: left;">Delete comments</button>
+              <button id="kopce2" style="float: left;">Delete comments</button>
             </section>
     
-            <button id="btn1" onclick="updateText()">Submit</button>
+            <button id="kopce1" onclick="updateText()">Submit</button>
           </fieldset>
-        </div>
+       
           </div>
         </div>
         <div class="rightcolumn">

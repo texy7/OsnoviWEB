@@ -15,6 +15,23 @@ header {
   ;
 }
 
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  #panel,
+  #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: lightyellow;
+    border: solid 1px #c3c3c3;
+  }
+
+  #panel {
+    padding: 50px;
+    display: none;
+  }
+
 
 .leftcolumn {
   float: left;
